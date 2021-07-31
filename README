@@ -1,6 +1,6 @@
 Implemented 19 layer Plain and Residual Networks as illustrated in the ResNet paper for the imagenet dataset. 
 Trained these networks for the CIFAR 10 dataset to see if it generalises to other datasets
-Have included the trained weights in the data/ directory in .pth format
+Have included the trained weights in the weights/ directory in .pth format
 
 model - Plain Network; class - Vgg_like
 model_res - ResNet; class - ResNet
@@ -14,3 +14,12 @@ While running, run all the cells other than the training cell and the code cell 
 Modifications to the model:
 1) Commented out the softmax because the loss used while training is cross-entropy loss, which when used with softmax was training very slowly.
 2) Realized that had not normalised the images as a part of the preprocessing; but the model should have learned these features while training.
+
+Performnce:
+1) Plain network - 11.1 million parameters
+Train Error: Accuracy: 88.3%, Avg loss: 0.347580
+Test Error: Accuracy: 80.1%, Avg loss: 0.721762 
+
+2) Residual network - 11.3 million parameters
+Train Error: Accuracy: 89.4%, Avg loss: 0.309982 
+Test Error: Accuracy: 84.9%, Avg loss: 0.482919 
