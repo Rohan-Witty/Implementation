@@ -9,8 +9,6 @@ Training:
 Trained the Plain network for 45 epochs using lr 0.1 and wd 0.001  in sgd.
 Trained the ResNet first for 25 epochs using sgd with above settings, followed by 20 epochs using adam_w with lr 3e-3, wd 0.1
 
-While running, run all the cells other than the training cell and the code cell after it in which the weights were trained
-
 Modifications to the model:
 1) Commented out the softmax because the loss used while training is cross-entropy loss, which when used with softmax was training very slowly.
 2) Realized that had not normalised the images as a part of the preprocessing; but the model should have learned these features while training.
